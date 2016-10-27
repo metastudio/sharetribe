@@ -150,6 +150,14 @@ group :development do
   gem 'better_errors', "~> 2.1.1"
   gem 'web-console', '~> 2.0'
   gem 'awesome_print', '~> 1.6.1'
+
+  #Deploy
+  gem 'capistrano', '~> 3.6.1', require: false
+  gem 'capistrano-rails',   '~> 1.1.7', require: false
+  gem 'capistrano-bundler', '~> 1.1.4', require: false
+  gem 'capistrano-rvm',   '~> 0.1.2', require: false
+  gem 'capistrano3-unicorn', '~> 0.2.1', require: false
+  gem 'capistrano-npm'
 end
 
 group :test do
@@ -185,3 +193,4 @@ gem 'color', '~> 1.8'
 
 gem 'uuidtools', '~> 2.1'
 gem 'transit-ruby', '~> 0.8'
+gem 'unicorn'
