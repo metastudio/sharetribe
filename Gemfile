@@ -157,6 +157,7 @@ group :development do
   gem 'capistrano-bundler', '~> 1.1.4', require: false
   gem 'capistrano-rvm',   '~> 0.1.2', require: false
   gem 'capistrano3-unicorn', '~> 0.2.1', require: false
+  gem 'capistrano3-delayed-job', '~> 1.0', require: false
   gem 'capistrano-npm'
 end
 
