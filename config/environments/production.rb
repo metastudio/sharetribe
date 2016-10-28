@@ -92,6 +92,7 @@ Kassi::Application.configure do
 
   if mail_delivery_method == :smtp
     ActionMailer::Base.smtp_settings = {
+      :host                 => APP_CONFIG.smtp_email_host,
       :address              => APP_CONFIG.smtp_email_address,
       :port                 => APP_CONFIG.smtp_email_port,
       :domain               => APP_CONFIG.smtp_email_domain,
