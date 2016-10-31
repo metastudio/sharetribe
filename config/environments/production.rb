@@ -92,14 +92,13 @@ Kassi::Application.configure do
 
   if mail_delivery_method == :smtp
     ActionMailer::Base.smtp_settings = {
-      :host                 => APP_CONFIG.smtp_email_host,
       :address              => APP_CONFIG.smtp_email_address,
       :port                 => APP_CONFIG.smtp_email_port,
       :domain               => APP_CONFIG.smtp_email_domain,
       :user_name            => APP_CONFIG.smtp_email_user_name,
       :password             => APP_CONFIG.smtp_email_password,
       :authentication       => 'plain',
-      :enable_starttls_auto => true
+      :enable_starttls_auto => APP_CONFIG.smtp_enable_starttls_auto || true
     }
   end
 
